@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './components/Navbar.jsx';
+import Home from './components/Home.jsx';
+import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
+import { FaArrowUp } from 'react-icons/fa';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button 
+  className="back-to-top" 
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>
+  <FaArrowUp />
+</button>
+
+      <div className="App">
+        <Navbar />
+        <main>
+          <Home />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+
+        <footer className="footer">
+  <p>© {new Date().getFullYear()} Wael. Built with React 💜</p>
+</footer>
+      </div>
+    </>
   );
 }
 
