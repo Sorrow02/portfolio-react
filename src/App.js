@@ -1,11 +1,13 @@
+import { FaArrowUp } from 'react-icons/fa';
 import React from 'react';
 import './App.css';
+
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
-import { FaArrowUp } from 'react-icons/fa';
+
 
 function App() {
   return (
